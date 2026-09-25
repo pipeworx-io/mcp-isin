@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-isin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Securities-identifier validation MCP (ISIN / CUSIP).",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-isin": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "isin"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-isin"
+    "url": "git+https://github.com/pipeworx-io/mcp-isin.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-70a11303d5d6f9a2aba7ed68eb1af6204f7989bfecf74ddbf22daba6b3f3d9be",
+    "sourceCommit": "70cd53748fc9f9a43ed3681d751bfa96e701efd2"
   }
 }
